@@ -7,9 +7,9 @@ import java.util.Collections;
 public class ListOperations { // Main class init
     public static void main(String[] args) {
 
-        Scanner scn = new Scanner(System.in); // Scanner init
         List<Double> doublesList = new ArrayList<>(); // Empty dynamic array init
 
+        Scanner scn = new Scanner(System.in); // Scanner init
         System.out.println("Enter the list of doubles: ");
 
         int listLength = 5; // Sets length of array by limiting element additions to array - loop init
@@ -21,9 +21,9 @@ public class ListOperations { // Main class init
             count++; // Updates count after each array addition
         }
 
-        System.out.println("\nEntered list: " + doublesList + "\n"); // Output completed array
-
         scn.close(); // Release scanner
+
+        System.out.println("\nEntered list: " + doublesList + "\n"); // Output completed array
 
         // Loop for calculating total of array elements
         double total = 0; // Loop and total init.
