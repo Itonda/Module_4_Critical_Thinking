@@ -10,17 +10,22 @@ public class ListOperations { // Main class init
         List<Double> doublesList = new ArrayList<>(); // Empty dynamic array init
 
         Scanner scn = new Scanner(System.in); // Scanner init
-        System.out.println("Enter the list of doubles: ");
+        System.out.println("Enter a list of 5 numbers (decimals allowed): ");
 
         int listLength = 5; // Sets length of array by limiting element additions to array - loop init
         int count = 0; // counter for loop - loop init
 
         // Loop for adding elements to array. Stops at listLength
         while (count < listLength) { // Condition - Loop exits when count == listLength
-            System.out.print("Enter number " + (count + 1) + ": ");
-            if (scn.hasNextDouble()) {
+            System.out.print("Enter number " + (count + 1) + ": "); // Prompt, with entry number included, user input
+
+            if (scn.hasNextDouble()) { // Checks if input interprets as double
                 doublesList.add(scn.nextDouble()); // Adds input to next index in array. Implies count == array index
                 count++; // Updates count after each array addition
+
+            } else { // 'If' selection should contain an else for validation
+                System.out.println("Invalid input");
+                scn.nextLine(); // Clear input
             }
         }
 
