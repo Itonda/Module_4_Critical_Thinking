@@ -17,8 +17,11 @@ public class ListOperations { // Main class init
 
         // Loop for adding elements to array. Stops at listLength
         while (count < listLength) { // Condition - Loop exits when count == listLength
-            doublesList.add(scn.nextDouble()); // Adds input to next index in array. Implies count == array index
-            count++; // Updates count after each array addition
+            System.out.print("Enter number " + (count + 1) + ": ");
+            if (scn.hasNextDouble()) {
+                doublesList.add(scn.nextDouble()); // Adds input to next index in array. Implies count == array index
+                count++; // Updates count after each array addition
+            }
         }
 
         scn.close(); // Release scanner
