@@ -25,7 +25,7 @@ public class ListOperations { // Main class init
 
             } else { // 'If' selection should contain an else for validation
                 System.out.println("Invalid input");
-                scn.nextLine(); // Clear input
+                scn.next(); // Clear input
             }
         }
 
